@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CSharpEducation301.Business/CSharpEducation301.Business.csproj" />
+  <Project Path="CSharpEducation301.DataAccess/CSharpEducation301.DataAccess.csproj" />
+  <Project Path="CSharpEducation301.Entities/CSharpEducation301.Entities.csproj" />
+  <Project Path="CSharpEducation301.Presentation/CSharpEducation301.Presentation.csproj" />
+</Solution>
