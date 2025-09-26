@@ -6,4 +6,5 @@ public class Customer
     public string LastName { get; set; }
     public string District { get; set; }
     public string City { get; set; }
+    public List<Order> Orders { get; set; }
 }

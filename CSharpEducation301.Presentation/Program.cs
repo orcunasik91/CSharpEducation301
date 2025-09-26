@@ -1,17 +1,19 @@
-namespace CSharpEducation301.Presentation
+using Microsoft.Extensions.Configuration;
+
+namespace CSharpEducation301.Presentation;
+internal static class Program
 {
-    internal static class Program
+    public static IConfiguration Configuration { get; private set; }
+    [STAThread]
+    static void Main()
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
-        {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
-        }
+        #region ConfigurationDb
+         Configuration = new ConfigurationBuilder()
+            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .Build();
+        #endregion
+        ApplicationConfiguration.Initialize();
+        Application.Run(new Form1());
     }
 }
