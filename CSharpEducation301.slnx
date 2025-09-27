@@ -1,6 +1,7 @@
 <Solution>
   <Project Path="CSharpEducation301.Business/CSharpEducation301.Business.csproj" />
   <Project Path="CSharpEducation301.DataAccess/CSharpEducation301.DataAccess.csproj" />
+  <Project Path="CSharpEducation301.EFDbFirst/CSharpEducation301.EFDbFirst.csproj" Id="a1733f33-6b4a-4798-9593-d53af9f808c0" />
   <Project Path="CSharpEducation301.Entities/CSharpEducation301.Entities.csproj" />
   <Project Path="CSharpEducation301.Presentation/CSharpEducation301.Presentation.csproj" />
 </Solution>
