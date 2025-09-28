@@ -1,4 +1,8 @@
+using CSharpEducation301.Business.Abstracts;
+using CSharpEducation301.Business.Concretes;
+using CSharpEducation301.DataAccess.Abstracts;
 using CSharpEducation301.DataAccess.Context;
+using CSharpEducation301.DataAccess.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +22,8 @@ internal static class Program
         var services = new ServiceCollection();
         services.AddDbContext<AppEducationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+        services.AddScoped<ICategoryDal, EfCategoryDal>();
+        services.AddScoped<ICategoryService, CategoryManager>();
         services.AddScoped<FormCategory>();
         #endregion
         ApplicationConfiguration.Initialize();

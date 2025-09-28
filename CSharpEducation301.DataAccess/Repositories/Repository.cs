@@ -8,8 +8,9 @@ public class Repository<T> : IRepositoryDal<T> where T : class
 {
     private readonly AppEducationDbContext _context;
     private readonly DbSet<T> _dbSet;
-    public Repository()
+    public Repository(AppEducationDbContext context)
     {
+        _context = context;
         _dbSet = _context.Set<T>();
     }
     public void Delete(T entity)

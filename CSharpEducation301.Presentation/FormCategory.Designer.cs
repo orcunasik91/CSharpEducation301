@@ -71,6 +71,7 @@
             btnList.TabIndex = 2;
             btnList.Text = "Listele";
             btnList.UseVisualStyleBackColor = false;
+            btnList.Click += btnList_Click;
             // 
             // dataGridView1
             // 
@@ -113,6 +114,7 @@
             // rdbActive
             // 
             rdbActive.AutoSize = true;
+            rdbActive.Checked = true;
             rdbActive.Location = new Point(152, 85);
             rdbActive.Name = "rdbActive";
             rdbActive.Size = new Size(61, 24);
@@ -128,7 +130,6 @@
             rdbPassive.Name = "rdbPassive";
             rdbPassive.Size = new Size(60, 24);
             rdbPassive.TabIndex = 8;
-            rdbPassive.TabStop = true;
             rdbPassive.Text = "Pasif";
             rdbPassive.UseVisualStyleBackColor = true;
             // 
@@ -141,6 +142,7 @@
             btnAdd.TabIndex = 9;
             btnAdd.Text = "Ekle";
             btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnUpdate
             // 
@@ -151,6 +153,7 @@
             btnUpdate.TabIndex = 10;
             btnUpdate.Text = "Güncelle";
             btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnRemove
             // 
@@ -161,6 +164,7 @@
             btnRemove.TabIndex = 11;
             btnRemove.Text = "Kaldır";
             btnRemove.UseVisualStyleBackColor = false;
+            btnRemove.Click += btnRemove_Click;
             // 
             // btnGetById
             // 
@@ -171,6 +175,7 @@
             btnGetById.TabIndex = 12;
             btnGetById.Text = "Id'ye Göre Getir";
             btnGetById.UseVisualStyleBackColor = false;
+            btnGetById.Click += btnGetById_Click;
             // 
             // FormCategory
             // 

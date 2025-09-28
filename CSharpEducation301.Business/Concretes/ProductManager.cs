@@ -1,32 +1,40 @@
 ﻿using CSharpEducation301.Business.Abstracts;
+using CSharpEducation301.DataAccess.Abstracts;
 using CSharpEducation301.Entities.Concrete;
 
 namespace CSharpEducation301.Business.Concretes;
 
 public class ProductManager : IProductService
 {
+    private readonly IProductDal productDal;
+
+    public ProductManager(IProductDal _productDal)
+    {
+        productDal = _productDal;
+    }
+
     public void Delete(Product entity)
     {
-        throw new NotImplementedException();
+        productDal.Delete(entity);
     }
 
     public List<Product> GetAll()
     {
-        throw new NotImplementedException();
+        return productDal.GetAll();
     }
 
     public Product GetById(int id)
     {
-        throw new NotImplementedException();
+        return productDal.GetById(id);
     }
 
     public void Insert(Product entity)
     {
-        throw new NotImplementedException();
+        productDal.Insert(entity);
     }
 
     public void Update(Product entity)
     {
-        throw new NotImplementedException();
+        productDal.Update(entity);
     }
 }

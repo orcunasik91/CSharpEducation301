@@ -1,32 +1,38 @@
 ﻿using CSharpEducation301.Business.Abstracts;
+using CSharpEducation301.DataAccess.Abstracts;
 using CSharpEducation301.Entities.Concrete;
 
 namespace CSharpEducation301.Business.Concretes;
 
 public class OrderManager : IOrderService
 {
+    private readonly IOrderDal orderDal;
+    public OrderManager(IOrderDal _orderDal)
+    {
+        orderDal = _orderDal;
+    }
     public void Delete(Order entity)
     {
-        throw new NotImplementedException();
+        orderDal.Delete(entity);
     }
 
     public List<Order> GetAll()
     {
-        throw new NotImplementedException();
+        return orderDal.GetAll();
     }
 
     public Order GetById(int id)
     {
-        throw new NotImplementedException();
+        return orderDal.GetById(id);
     }
 
     public void Insert(Order entity)
     {
-        throw new NotImplementedException();
+        orderDal.Insert(entity);
     }
 
     public void Update(Order entity)
     {
-        throw new NotImplementedException();
+        orderDal.Update(entity);
     }
 }
