@@ -1,4 +1,4 @@
-using CSharpEducation301.Business.Abstracts;
+﻿using CSharpEducation301.Business.Abstracts;
 using CSharpEducation301.Business.Concretes;
 using CSharpEducation301.DataAccess.Abstracts;
 using CSharpEducation301.DataAccess.Context;
@@ -14,7 +14,7 @@ internal static class Program
     [STAThread]
     static void Main()
     {
-        #region ConfigurationDb
+        #region Configurations
          Configuration = new ConfigurationBuilder()
             .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
@@ -24,12 +24,15 @@ internal static class Program
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         services.AddScoped<ICategoryDal, EfCategoryDal>();
         services.AddScoped<ICategoryService, CategoryManager>();
+        services.AddScoped<IProductDal, EfProductDal>();
+        services.AddScoped<IProductService, ProductManager>();
         services.AddScoped<FormCategory>();
+        services.AddScoped<FormProduct>();
         #endregion
         ApplicationConfiguration.Initialize();
         using (var serviceProvider = services.BuildServiceProvider())
         {
-            var mainForm = serviceProvider.GetRequiredService<FormCategory>();
+            var mainForm = serviceProvider.GetRequiredService<FormProduct>();
             Application.Run(mainForm);
 
         }

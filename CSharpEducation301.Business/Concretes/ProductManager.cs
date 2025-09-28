@@ -28,6 +28,11 @@ public class ProductManager : IProductService
         return productDal.GetById(id);
     }
 
+    public List<Product> GetProductsWithCategory()
+    {
+        return productDal.GetProductsWithCategory();
+    }
+
     public void Insert(Product entity)
     {
         productDal.Insert(entity);

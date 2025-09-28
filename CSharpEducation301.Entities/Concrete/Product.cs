@@ -1,4 +1,6 @@
-﻿namespace CSharpEducation301.Entities.Concrete;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace CSharpEducation301.Entities.Concrete;
 public class Product
 {
     public int ProductId { get; set; }
@@ -8,5 +10,7 @@ public class Product
     public string Description { get; set; }
     public int CategoryId { get; set; }
     public Category Category { get; set; }
+    [NotMapped]
+    public string CategoryName { get; set; }
     public List<Order> Orders { get; set; }
 }

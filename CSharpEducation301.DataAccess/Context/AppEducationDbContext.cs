@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 
 namespace CSharpEducation301.DataAccess.Context;
-public  class AppEducationDbContext : DbContext
+public class AppEducationDbContext : DbContext
 {
     public AppEducationDbContext(DbContextOptions<AppEducationDbContext> options) : base(options)
     { 

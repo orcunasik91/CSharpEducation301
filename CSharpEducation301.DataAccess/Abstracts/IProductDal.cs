@@ -3,4 +3,5 @@
 namespace CSharpEducation301.DataAccess.Abstracts;
 public interface IProductDal : IRepositoryDal<Product>
 {
+    List<Product> GetProductsWithCategory();
 }

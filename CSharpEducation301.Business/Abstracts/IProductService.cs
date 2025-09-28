@@ -3,4 +3,5 @@
 namespace CSharpEducation301.Business.Abstracts;
 public interface IProductService : IBaseService<Product>
 {
+    List<Product> GetProductsWithCategory();
 }
