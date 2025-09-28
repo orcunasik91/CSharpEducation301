@@ -12,6 +12,6 @@ internal static class Program
         IConfiguration configuration = builder.Build();
         string connectionString = configuration.GetConnectionString("SqlConnection");
         ApplicationConfiguration.Initialize();
-        Application.Run(new FormLocation());
+        Application.Run(new FormStatistics());
     }
 }
