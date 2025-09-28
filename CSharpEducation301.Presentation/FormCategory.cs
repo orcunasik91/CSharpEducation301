@@ -1,8 +1,8 @@
 namespace CSharpEducation301.Presentation
 {
-    public partial class Form1 : Form
+    public partial class FormCategory : Form
     {
-        public Form1()
+        public FormCategory()
         {
             InitializeComponent();
         }

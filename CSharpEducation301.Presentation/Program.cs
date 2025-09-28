@@ -18,12 +18,12 @@ internal static class Program
         var services = new ServiceCollection();
         services.AddDbContext<AppEducationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-        services.AddScoped<Form1>();
+        services.AddScoped<FormCategory>();
         #endregion
         ApplicationConfiguration.Initialize();
         using (var serviceProvider = services.BuildServiceProvider())
         {
-            var mainForm = serviceProvider.GetRequiredService<Form1>();
+            var mainForm = serviceProvider.GetRequiredService<FormCategory>();
             Application.Run(mainForm);
 
         }
